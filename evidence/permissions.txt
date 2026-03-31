@@ -1,0 +1,35 @@
+$ ls -ld practice_cli_demo docs_missing_placeholder 2>/dev/null || true
+drwxr-xr-x@ 4 kapr  staff  128 Mar 31 17:15 practice_cli_demo
+
+$ ls -l practice_cli_demo/docs/notes.txt
+-rw-r--r--@ 1 kapr  staff  23 Mar 31 17:15 practice_cli_demo/docs/notes.txt
+
+$ chmod 755 practice_cli_demo
+
+$ chmod 644 practice_cli_demo/docs/notes.txt
+
+$ ls -ld practice_cli_demo
+drwxr-xr-x@ 4 kapr  staff  128 Mar 31 17:15 practice_cli_demo
+
+$ ls -l practice_cli_demo/docs/notes.txt
+-rw-r--r--@ 1 kapr  staff  23 Mar 31 17:15 practice_cli_demo/docs/notes.txt
+
+$ chmod 700 practice_cli_demo
+
+$ chmod 600 practice_cli_demo/docs/notes.txt
+
+$ ls -ld practice_cli_demo
+drwx------@ 4 kapr  staff  128 Mar 31 17:15 practice_cli_demo
+
+$ ls -l practice_cli_demo/docs/notes.txt
+-rw-------@ 1 kapr  staff  23 Mar 31 17:15 practice_cli_demo/docs/notes.txt
+
+$ chmod 755 practice_cli_demo
+
+$ chmod 644 practice_cli_demo/docs/notes.txt
+
+$ ls -ld practice_cli_demo
+drwxr-xr-x@ 4 kapr  staff  128 Mar 31 17:15 practice_cli_demo
+
+$ ls -l practice_cli_demo/docs/notes.txt
+-rw-r--r--@ 1 kapr  staff  23 Mar 31 17:15 practice_cli_demo/docs/notes.txt

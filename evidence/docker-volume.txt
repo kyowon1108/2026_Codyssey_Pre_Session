@@ -1,0 +1,30 @@
+$ docker volume create codyssey-data
+codyssey-data
+
+$ docker run -d --name codyssey-vol-1 -v codyssey-data:/data ubuntu sleep infinity
+42a5bed38442e40ab1d6e1d8538e87e1d60f2279a0650c637b1b89166d96d72b
+
+$ docker exec codyssey-vol-1 bash -lc 'echo persistent-data > /data/persist.txt && cat /data/persist.txt'
+persistent-data
+
+$ docker rm -f codyssey-vol-1
+codyssey-vol-1
+
+$ docker run -d --name codyssey-vol-2 -v codyssey-data:/data ubuntu sleep infinity
+e34942ef1d1a671e5973d957846de707ab5944b6c26946e7d54108bc9a29343f
+
+$ docker exec codyssey-vol-2 bash -lc 'cat /data/persist.txt'
+persistent-data
+
+$ docker volume inspect codyssey-data
+[
+    {
+        "CreatedAt": "2026-03-31T08:17:53Z",
+        "Driver": "local",
+        "Labels": null,
+        "Mountpoint": "/var/lib/docker/volumes/codyssey-data/_data",
+        "Name": "codyssey-data",
+        "Options": null,
+        "Scope": "local"
+    }
+]

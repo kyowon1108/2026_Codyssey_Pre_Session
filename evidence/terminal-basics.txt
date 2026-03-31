@@ -1,0 +1,41 @@
+$ pwd
+/Users/kapr/Projects/External/2026_Codyssey/2026_Codyssey_Pre_Session
+
+$ ls -la
+total 48
+drwxr-xr-x@ 10 kapr  staff    320 Mar 31 17:15 .
+drwxr-xr-x@  3 kapr  staff     96 Mar 31 17:11 ..
+drwxr-xr-x@ 12 kapr  staff    384 Mar 31 17:14 .git
+drwxr-xr-x@  5 kapr  staff    160 Mar 31 17:11 .omx
+-rw-r--r--@  1 kapr  staff    232 Mar 31 17:15 Dockerfile
+-rw-r--r--@  1 kapr  staff     50 Mar 31 17:09 README.md
+drwxr-xr-x@  3 kapr  staff     96 Mar 31 17:15 app
+-rw-r--r--@  1 kapr  staff  12525 Mar 31 17:11 asdf.md
+drwxr-xr-x@  4 kapr  staff    128 Mar 31 17:15 evidence
+drwxr-xr-x@  2 kapr  staff     64 Mar 31 17:15 practice_cli_demo
+
+$ mkdir -p practice_cli_demo/docs practice_cli_demo/archive
+
+$ touch practice_cli_demo/docs/notes.txt
+
+$ ls -la practice_cli_demo/docs
+total 0
+drwxr-xr-x@ 3 kapr  staff   96 Mar 31 17:15 .
+drwxr-xr-x@ 4 kapr  staff  128 Mar 31 17:15 ..
+-rw-r--r--@ 1 kapr  staff    0 Mar 31 17:15 notes.txt
+
+$ cp practice_cli_demo/docs/notes.txt practice_cli_demo/archive/notes-copy.txt
+
+$ mv practice_cli_demo/archive/notes-copy.txt practice_cli_demo/archive/notes-renamed.txt
+
+$ printf "terminal practice file\n" > practice_cli_demo/docs/notes.txt
+
+$ cat practice_cli_demo/docs/notes.txt
+terminal practice file
+
+$ rm practice_cli_demo/archive/notes-renamed.txt
+
+$ ls -la practice_cli_demo/archive
+total 0
+drwxr-xr-x@ 2 kapr  staff   64 Mar 31 17:15 .
+drwxr-xr-x@ 4 kapr  staff  128 Mar 31 17:15 ..

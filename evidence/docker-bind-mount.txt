@@ -1,0 +1,10 @@
+$ docker run -d --name codyssey-bind-8081 -p 8081:80 -v "$PWD/app:/usr/share/nginx/html" nginx:alpine
+f7957214fd400bdc7524e9ede9f7ab20371e10751d461d721ac0df4bb4ed34e2
+
+$ curl -fsS http://localhost:8081/live-check.txt
+before bind mount update
+
+$ printf 'after bind mount update\n' > app/live-check.txt
+
+$ curl -fsS http://localhost:8081/live-check.txt
+after bind mount update

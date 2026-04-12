@@ -1,2 +1,5 @@
 .DS_Store
 .omx/
+__pycache__/
+*.pyc
+mission2/state.json

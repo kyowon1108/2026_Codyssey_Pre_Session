@@ -58,5 +58,3 @@ mission2/
   "best_score": 100
 }
 ```
-
-<!-- clone/pull 실습 -->
